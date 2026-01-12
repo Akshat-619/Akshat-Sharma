@@ -20,7 +20,7 @@ const Skills: React.FC = () => {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
           {SKILLS.map((skill, index) => (
             <ScrollReveal key={skill.name} delay={index * 50} className="h-full">
               <div 
