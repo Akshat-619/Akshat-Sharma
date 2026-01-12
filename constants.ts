@@ -117,7 +117,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: 'Metrion — Multi-Page Dashboard',
     description: 'A dashboard-style web application built with multiple pages, clean layout structure, and responsive design to manage and visualize information.',
-    image: '/assets/Metrion-Dashboard-1.png',
+    image: '/Metrion-Dashboard-1.png',
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     demoLink: 'https://metrion-dashboard-5j94.vercel.app/',
     codeLink: 'https://github.com/Akshat-619/Metrion-Dashboard'
@@ -126,7 +126,7 @@ export const PROJECTS: Project[] = [
     id: 2,
     title: 'MS-Dashboard — Admin Panel',
     description: 'A compact admin dashboard created to practice UI consistency, layout systems, and data-driven components in a modern interface.',
-    image: '/assets/Ms-Dashboard.png',
+    image: '/Ms-Dashboard.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
     demoLink: 'https://dashboard-xj99.vercel.app/',
     codeLink: 'https://github.com/Akshat-619/Dashboard'
@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
     id: 3,
     title: 'Growlytics — Landing Page',
     description: 'A modern landing page focused on strong visual hierarchy, conversion-oriented layout, and clean design.',
-    image: '/assets/Growlytics.png',
+    image: '/Growlytics.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
     demoLink: 'https://growlytics-five.vercel.app',
     codeLink: 'https://github.com/Akshat-619/Growlytics'
