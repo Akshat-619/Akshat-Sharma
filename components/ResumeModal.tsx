@@ -199,23 +199,162 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
           background: #9ca3af;
         }
+        
+        /* Print Styles for Resume */
         @media print {
-            body > *:not(#root) {
-                display: none;
-            }
-            #root > *:not(div:has(#resume-content)) {
-                display: none;
-            }
-            /* Hide modal backdrop and other UI elements */
-            .fixed.inset-0 {
-                position: relative;
-                z-index: auto;
-            }
-            .absolute.inset-0.bg-black\/60 {
-                display: none;
-            }
-            /* Reset modal container styles for print */
-            .relative.w-full.max-w-4xl {
+          @page {
+            size: A4;
+            margin: 0.5in;
+          }
+          
+          body * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+          
+          body > *:not(#root) {
+            display: none !important;
+          }
+          
+          #root > *:not(div:has(#resume-content)) {
+            display: none !important;
+          }
+          
+          .fixed.inset-0 {
+            position: relative !important;
+          }
+          
+          /* Show only resume content when printing */
+          #resume-content {
+            display: block !important;
+            position: relative !important;
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+          }
+          
+          /* Resume print styles */
+          #resume-content .bg-white {
+            background: white !important;
+            box-shadow: none !important;
+            border: none !important;
+            border-radius: 0 !important;
+          }
+          
+          #resume-content .max-w-3xl {
+            max-width: none !important;
+            width: 100% !important;
+          }
+          
+          #resume-content .h-[90vh] {
+            height: auto !important;
+            min-height: auto !important;
+          }
+          
+          #resume-content .rounded-3xl {
+            border-radius: 0 !important;
+          }
+          
+          #resume-content .shadow-2xl {
+            box-shadow: none !important;
+          }
+          
+          #resume-content .overflow-hidden {
+            overflow: visible !important;
+          }
+          
+          #resume-content .flex-col {
+            display: block !important;
+          }
+          
+          #resume-content .animate-fade-in-up {
+            animation: none !important;
+          }
+          
+          /* Typography for print */
+          #resume-content h1 {
+            font-size: 24pt !important;
+            color: #1a1a1a !important;
+            margin-bottom: 16pt !important;
+          }
+          
+          #resume-content h2 {
+            font-size: 18pt !important;
+            color: #1a1a1a !important;
+            margin-bottom: 12pt !important;
+            margin-top: 20pt !important;
+            border-bottom: 1px solid #e5e7eb !important;
+            padding-bottom: 8pt !important;
+          }
+          
+          #resume-content h3 {
+            font-size: 14pt !important;
+            color: #374151 !important;
+            margin-bottom: 8pt !important;
+          }
+          
+          #resume-content p {
+            font-size: 11pt !important;
+            line-height: 1.4 !important;
+            margin-bottom: 8pt !important;
+            color: #4b5563 !important;
+          }
+          
+          #resume-content .text-gray-800 {
+            color: #1a1a1a !important;
+          }
+          
+          #resume-content .text-gray-600 {
+            color: #4b5563 !important;
+          }
+          
+          #resume-content .text-gray-500 {
+            color: #6b7280 !important;
+          }
+          
+          /* Section spacing */
+          #resume-content section {
+            margin-bottom: 20pt !important;
+            page-break-inside: avoid;
+          }
+          
+          #resume-content .border-b {
+            border-color: #e5e7eb !important;
+          }
+          
+          #resume-content .border-gray-200 {
+            border-color: #e5e7eb !important;
+          }
+          
+          /* Skills and tags */
+          #resume-content .flex-wrap span {
+            font-size: 9pt !important;
+            padding: 4pt 8pt !important;
+            margin: 2pt !important;
+            border: 1px solid #e5e7eb !important;
+            background: #f9fafb !important;
+          }
+          
+          /* Experience layout */
+          #resume-content .border-l-4 {
+            border-left: 2px solid #e5e7eb !important;
+            padding-left: 16pt !important;
+            margin-left: 0 !important;
+          }
+          
+          #resume-content .pl-12 {
+            padding-left: 12pt !important;
+          }
+          
+          #resume-content .mb-6 {
+            margin-bottom: 12pt !important;
+          }
+          
+          /* Hide non-print elements */
+          #resume-content button,
+          #resume-content .print\\:hidden {
+            display: none !important;
+          }
                 width: 100%;
                 max-width: none;
                 height: auto;
