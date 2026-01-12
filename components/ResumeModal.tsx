@@ -111,13 +111,46 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
                 {/* Education Section (Static) */}
                 <section className="break-inside-avoid">
                     <h3 className="text-lg font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 pb-2 mb-6">Education</h3>
-                    <div>
-                        <div className="flex justify-between items-baseline mb-1">
-                            <h4 className="text-lg font-bold text-gray-800">Bachelor of Technology in Computer Science</h4>
-                            <span className="text-sm text-gray-500">2020 - 2024</span>
+                    <div className="space-y-6">
+                        {/* B.Tech */}
+                        <div className="mb-6">
+                            <div className="flex justify-between items-baseline mb-1">
+                                <h4 className="text-lg font-bold text-gray-800">B.Tech in Computer Science</h4>
+                                <span className="text-sm text-gray-500">2021 - 2025</span>
+                            </div>
+                            <div className="text-sm text-gray-600">University/College Name</div>
+                            <p className="text-sm text-gray-500 mt-2">Currently pursuing final year of B.Tech in Computer Science, building on a strong academic foundation in programming, software development, and web technologies.</p>
                         </div>
-                        <div className="text-sm text-gray-600">University/College Name</div>
-                        <p className="text-sm text-gray-500 mt-2">Specialized in UI Development and Modern Web Technologies.</p>
+
+                        {/* Diploma */}
+                        <div className="mb-6">
+                            <div className="flex justify-between items-baseline mb-1">
+                                <h4 className="text-lg font-bold text-gray-800">Diploma in Computer Science</h4>
+                                <span className="text-sm text-gray-500">2024</span>
+                            </div>
+                            <div className="text-sm text-gray-600">Polytechnic College Name</div>
+                            <p className="text-sm text-gray-500 mt-2">Developed core technical skills and practical knowledge in computing and application development.</p>
+                        </div>
+
+                        {/* Higher Secondary */}
+                        <div className="mb-6">
+                            <div className="flex justify-between items-baseline mb-1">
+                                <h4 className="text-lg font-bold text-gray-800">Higher Secondary (12th Grade)</h4>
+                                <span className="text-sm text-gray-500">2022</span>
+                            </div>
+                            <div className="text-sm text-gray-600">Laxmikant Kanojiya Jr. College, Nagpur</div>
+                            <p className="text-sm text-gray-500 mt-2">Completed with 78%</p>
+                        </div>
+
+                        {/* Secondary School */}
+                        <div>
+                            <div className="flex justify-between items-baseline mb-1">
+                                <h4 className="text-lg font-bold text-gray-800">Secondary School (10th Grade)</h4>
+                                <span className="text-sm text-gray-500">2020</span>
+                            </div>
+                            <div className="text-sm text-gray-600">St. Ann's English Medium School, Khaperkheda, Nagpur</div>
+                            <p className="text-sm text-gray-500 mt-2">Completed with 68%</p>
+                        </div>
                     </div>
                 </section>
             </div>
