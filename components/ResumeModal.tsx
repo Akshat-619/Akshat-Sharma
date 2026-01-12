@@ -35,19 +35,25 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
       ></div>
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl h-[85vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up print:h-auto print:shadow-none print:rounded-none print:w-full print:max-w-none">
+      <div className="relative w-full max-w-5xl h-[90vh] bg-white rounded-3xl shadow-2xl flex flex-col overflow-hidden animate-fade-in-up print:h-auto print:shadow-none print:rounded-none print:w-full print:max-w-none border border-gray-200">
         
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white z-10 print:hidden">
-            <h2 className="text-lg font-bold text-gray-800 flex items-center gap-2">
-                <span className="material-symbols-outlined text-primary">description</span>
-                Resume Preview
-            </h2>
+        <div className="flex items-center justify-between p-6 border-b border-gray-100 bg-gradient-to-r from-white to-gray-50 z-10 print:hidden">
+            <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary/80 rounded-xl flex items-center justify-center shadow-lg">
+                    <span className="material-symbols-outlined text-white text-xl">description</span>
+                </div>
+                <div>
+                    <h2 className="text-2xl font-bold text-gray-800">Resume Preview</h2>
+                    <p className="text-sm text-gray-500">UI Developer Portfolio</p>
+                </div>
+            </div>
             <button 
                 onClick={onClose}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-500"
+                className="p-3 hover:bg-gray-100 rounded-full transition-all duration-300 text-gray-500 hover:text-gray-700 hover:scale-110"
+                aria-label="Close resume"
             >
-                <span className="material-symbols-outlined">close</span>
+                <span className="material-symbols-outlined text-xl">close</span>
             </button>
         </div>
 
@@ -156,21 +162,26 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
             </div>
         </div>
 
-        {/* Footer Actions */}
-        <div className="p-4 border-t border-gray-100 bg-white flex justify-end gap-4 z-10 print:hidden">
-            <button 
-                onClick={onClose}
-                className="px-6 py-2 rounded-full text-sm font-bold text-gray-600 hover:bg-gray-100 transition-colors"
-            >
-                Close
-            </button>
-            <button 
-                onClick={handleDownload}
-                className="px-6 py-2 rounded-full bg-primary text-white text-sm font-bold hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all flex items-center gap-2"
-            >
-                <span className="material-symbols-outlined text-[18px]">download</span>
-                Download PDF
-            </button>
+        {/* Download Button */}
+        <div className="p-6 border-t border-gray-100 bg-gradient-to-b from-gray-50 to-white">
+            <div className="flex gap-4">
+                <button 
+                    onClick={handleDownload}
+                    className="flex-1 px-8 py-4 bg-gradient-to-r from-primary to-primary/80 text-white rounded-xl font-bold hover:from-primary/90 hover:to-primary/70 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-3"
+                    aria-label="Download resume as PDF"
+                >
+                    <span className="material-symbols-outlined text-xl">download</span>
+                    <span>Download Resume</span>
+                </button>
+                <button 
+                    onClick={onClose}
+                    className="px-8 py-4 bg-gray-100 text-gray-700 rounded-xl font-bold hover:bg-gray-200 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
+                    aria-label="Close resume"
+                >
+                    <span className="material-symbols-outlined text-xl">close</span>
+                    <span>Close</span>
+                </button>
+            </div>
         </div>
       </div>
 
