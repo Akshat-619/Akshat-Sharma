@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeSection]); // Add activeSection to the dependency array
+  }, [activeSection, setIsScrolled]); // Add activeSection to the dependency array
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
