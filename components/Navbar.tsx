@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
                 <span className="material-symbols-outlined text-[24px]">code</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold text-text-dark tracking-tight leading-none group-hover:text-primary transition-colors">Akshat</span>
+                <span className="text-lg font-bold text-text-dark tracking-tight leading-none group-hover:text-primary transition-colors">Akshat Sharma</span>
                 <span className="text-[10px] text-text-muted font-mono font-medium tracking-widest uppercase mt-0.5">UI Developer</span>
               </div>
             </a>
