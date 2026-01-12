@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         setActiveSection('');
         return;
       }
-
+      
       for (const item of NAV_ITEMS) {
         const sectionId = item.href.substring(1);
         const element = document.getElementById(sectionId);
@@ -35,7 +35,6 @@ const Navbar: React.FC = () => {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection, setIsScrolled]); // Add activeSection to the dependency array
